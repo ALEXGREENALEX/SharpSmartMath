@@ -26,8 +26,8 @@ Used libs:
 * Roslyn: https://github.com/dotnet/roslyn
 
 ## Requirements
-SharpSmartMath (WPF based GUI): .NET Framework 4.6.2
-SharpSmartMathLib (Math and dynamic compilation Library): .NET Standart 2.0
+* SharpSmartMath (WPF based GUI): .NET Framework 4.6.2
+* SharpSmartMathLib (Math and dynamic compilation Library): .NET Standart 2.0
 
 ## License:
 **MIT**
