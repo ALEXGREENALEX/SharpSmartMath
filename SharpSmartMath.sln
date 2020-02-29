@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1000
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SharpSmartMathLib", "SharpSmartMathLib\SharpSmartMathLib.csproj", "{DEF15ED5-3885-4F06-8025-27D78C2D4DF6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SharpSmartMath", "SharpSmartMath\SharpSmartMath.csproj", "{493F321E-F393-44C0-8ACE-29FE29ED3649}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DEF15ED5-3885-4F06-8025-27D78C2D4DF6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEF15ED5-3885-4F06-8025-27D78C2D4DF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEF15ED5-3885-4F06-8025-27D78C2D4DF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEF15ED5-3885-4F06-8025-27D78C2D4DF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{493F321E-F393-44C0-8ACE-29FE29ED3649}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{493F321E-F393-44C0-8ACE-29FE29ED3649}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{493F321E-F393-44C0-8ACE-29FE29ED3649}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{493F321E-F393-44C0-8ACE-29FE29ED3649}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {59F7BFC6-8B4E-415F-9728-B9A8E7E4FF46}
+	EndGlobalSection
+EndGlobal
