@@ -1,6 +1,7 @@
 # SharpSmartMath
-SharpSmartMath - Roslyn based realtime math (include shader math) and C# code compiler. Just write some code like:
+SharpSmartMath - Roslyn based realtime math (include shader math) and C# code compiler.
 
+Just write some code like:
 "2 + 2" or "vec2((float)Math.Pow(2, 5) * sqrt(0.3)) * 5".
 
 
