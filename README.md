@@ -6,7 +6,7 @@ SharpSmartMath - Roslyn based realtime math (include shader math) and C# code co
 
 
 ## Usage:
-Compile from sources or download latest release. Change template "BaseProgram.cs" at output folder if needed.
+Compile from sources or download latest [release](../../releases). Change template "BaseProgram.cs" at output folder if needed.
 
 ### Default Usage:
 ![Default Usage](ScreenShots/0.png)
