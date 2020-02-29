@@ -1,10 +1,21 @@
 # SharpSmartMath
 ## Description
-SharpSmartMath - Roslyn based realtime math (include shader math) and C# code compiler. Just write some code like: "2 + 2" or "vec2((float)Math.Pow(2, 5) * sqrt(0.3)) * 5".
+SharpSmartMath - Roslyn based realtime math (include shader math) and C# code compiler. Just write some code like:
+
+"2 + 2" or "vec2((float)Math.Pow(2, 5) * sqrt(0.3)) * 5".
 
 
 ## Usage:
-Compile from sources and use it. Change template "BaseProgram.cs" at output folder if needed.
+Compile from sources or download latest release. Change template "BaseProgram.cs" at output folder if needed.
+
+### Default Usage:
+![Default Usage](ScreenShots/0.png)
+
+### Functional:
+![Functional](ScreenShots/1.png)
+
+### Localized error and simple IntelliSense support:
+![Error](ScreenShots/2.png)
 
 ## Links
 SharpSmartMath: https://github.com/ALEXGREENALEX/SharpSmartMath
