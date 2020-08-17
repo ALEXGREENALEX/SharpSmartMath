@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using SharpSmartMathLib;
+using OxyPlot;
+using OxyPlot.Axes;
+using OxyPlot.Series;
 
 namespace ExtMethods
 {
@@ -32,6 +35,127 @@ namespace ExtMethods
         {
             return arr.Length;
         }
+
+        #region Plots
+        public static void PlotDraw(this float[] Points)
+        {
+            try
+            {
+                DataPoint[] DataPoints = new DataPoint[Points.Length];
+
+                for (int i = 0; i < Points.Length; i++)
+                    DataPoints[i] = new DataPoint(i, Points[i]);
+
+                DynamicCompile.VirtualPlotModel.Series.Add(new LineSeries
+                {
+                    StrokeThickness = 2,
+                    Color = OxyColors.White,
+                    ItemsSource = DataPoints
+                });
+            }
+            catch { }
+        }
+
+        public static void PlotDraw(this double[] Points)
+        {
+            try
+            {
+                DataPoint[] DataPoints = new DataPoint[Points.Length];
+
+                for (int i = 0; i < Points.Length; i++)
+                    DataPoints[i] = new DataPoint(i, Points[i]);
+
+                DynamicCompile.VirtualPlotModel.Series.Add(new LineSeries
+                {
+                    StrokeThickness = 2,
+                    Color = OxyColors.White,
+                    ItemsSource = DataPoints
+                });
+            }
+            catch { }
+        }
+
+        public static void PlotDraw(this int[] Points)
+        {
+            try
+            {
+                DataPoint[] DataPoints = new DataPoint[Points.Length];
+
+                for (int i = 0; i < Points.Length; i++)
+                    DataPoints[i] = new DataPoint(i, Points[i]);
+
+                DynamicCompile.VirtualPlotModel.Series.Add(new LineSeries
+                {
+                    StrokeThickness = 2,
+                    Color = OxyColors.White,
+                    ItemsSource = DataPoints
+                });
+            }
+            catch { }
+        }
+
+        public static void PlotDraw(this float[,] Points)
+        {
+            try
+            {
+                DataPoint[] DataPoints = new DataPoint[Points.GetLength(0)];
+
+                for (int i = 0; i < DataPoints.Length; i++)
+                    DataPoints[i] = new DataPoint(Points[i, 0], Points[i, 1]);
+
+                DynamicCompile.VirtualPlotModel.Series.Add(new LineSeries
+                {
+                    StrokeThickness = 2,
+                    Color = OxyColors.White,
+                    ItemsSource = DataPoints
+                });
+            }
+            catch { }
+        }
+
+        public static void PlotDraw(this double[,] Points)
+        {
+            try
+            {
+                DataPoint[] DataPoints = new DataPoint[Points.GetLength(0)];
+
+                for (int i = 0; i < DataPoints.Length; i++)
+                    DataPoints[i] = new DataPoint(Points[i, 0], Points[i, 1]);
+
+                DynamicCompile.VirtualPlotModel.Series.Add(new LineSeries
+                {
+                    StrokeThickness = 2,
+                    Color = OxyColors.White,
+                    ItemsSource = DataPoints
+                });
+            }
+            catch { }
+        }
+
+        public static void PlotDraw(this int[,] Points)
+        {
+            try
+            {
+                DataPoint[] DataPoints = new DataPoint[Points.GetLength(0)];
+
+                for (int i = 0; i < DataPoints.Length; i++)
+                    DataPoints[i] = new DataPoint(Points[i, 0], Points[i, 1]);
+
+                DynamicCompile.VirtualPlotModel.Series.Add(new LineSeries
+                {
+                    StrokeThickness = 2,
+                    Color = OxyColors.White,
+                    ItemsSource = DataPoints
+                });
+            }
+            catch { }
+        }
+
+        public static void PlotClear()
+        {
+            DynamicCompile.VirtualPlotModel.Series.Clear();
+        }
+        #endregion
     }
 }
 

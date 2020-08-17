@@ -10,6 +10,7 @@ using Microsoft.CodeAnalysis.Emit;
 using Microsoft.CodeAnalysis.Text;
 
 using LibExtMethods;
+using OxyPlot;
 
 namespace SharpSmartMathLib
 {
@@ -17,6 +18,7 @@ namespace SharpSmartMathLib
     {
         public static List<string> VirtualConsoleOutput = new List<string>();
         public static List<string> VirtualConsoleErrorsOutput = new List<string>();
+        public static PlotModel VirtualPlotModel = new PlotModel();
 
         public const string Template_CodeString = "#pragma CODE_WILL_BE_PASTED_HERE";
         public static string CodeTemplate =
@@ -43,7 +45,7 @@ namespace SharpSmartMathLib
             }
         }";
         #endregion
-
+        
         public static string GetCodeTemplate(string Code, bool ReplaceInstructions = true)
         {
             Code = CodeTemplate.Replace(Template_CodeString, Code);
@@ -125,6 +127,7 @@ namespace SharpSmartMathLib
 
                     VirtualConsoleErrorsOutput.Clear();
                     VirtualConsoleOutput.Clear();
+                    VirtualPlotModel.Series.Clear();
 
                     Type type_program = assembly.GetType("Program");
                     MethodInfo method_info = type_program.GetMethod("Execute");
@@ -163,7 +166,7 @@ namespace SharpSmartMathLib
                 }
 
             }
-            catch (Exception Ex)
+            catch
             {
                 return false;
             }
