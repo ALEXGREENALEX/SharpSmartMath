@@ -168,8 +168,8 @@ namespace SharpSmartMath
 
                 PlotViewer.Dispatcher.Invoke(() =>
                 {
-                    PlotViewer.Model = DynamicCompile.VirtualPlotModel;
-                    PlotViewer.InvalidatePlot(true);
+                    PlotViewer.Model = Plot.Model;
+                    PlotViewer.InvalidatePlot();
                 });
 
                 EditorResult.Dispatcher.Invoke(() =>

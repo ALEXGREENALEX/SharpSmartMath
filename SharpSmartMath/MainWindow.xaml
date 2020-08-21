@@ -34,7 +34,7 @@
             VerticalScrollBarVisibility="Auto"
             BorderThickness="2" BorderBrush="#FFB4B4B4"
             TabIndex="0"
-            Text="return MathHelper.Pi;"
+            Text="for (double x = 0; x &lt; 1; x += 0.1)&#13;&#9;Plot.Add(x, 1 - abs(2 * x - 1));&#13;&#13;return MathHelper.Pi;"
             TextChanged="EditorCode_TextChanged" KeyDown="EditorCode_KeyDown" KeyUp="EditorCode_KeyUp">
 
             <avalonEdit:TextEditor.ContextMenu>
