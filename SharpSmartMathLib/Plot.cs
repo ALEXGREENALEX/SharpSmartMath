@@ -113,13 +113,21 @@ public static class Plot
 
     public static void Add(double Y)
     {
-        LineSeries LS = GetLastLineSeries();
-        LS.Points.Add(new DataPoint(LS.Points.Count - 1, Y));
+        try
+        {
+            LineSeries LS = GetLastLineSeries();
+            LS.Points.Add(new DataPoint(LS.Points.Count - 1, Y));
+        }
+        catch { }
     }
 
     public static void Add(double X, double Y)
     {
-        GetLastLineSeries().Points.Add(new DataPoint(X, Y));
+        try
+        {
+            GetLastLineSeries().Points.Add(new DataPoint(X, Y));
+        }
+        catch { }
     }
 
     public static void Clear()

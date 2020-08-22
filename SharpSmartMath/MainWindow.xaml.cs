@@ -34,6 +34,7 @@ namespace SharpSmartMath
         public MainWindow()
         {
             InitializeComponent();
+
             EditorCode.TextArea.TextView.LineTransformers.Add(new ColorizeAvalonEdit());
             EditorCode.TextArea.TextEntered += EditorCode_TextEntered;
 

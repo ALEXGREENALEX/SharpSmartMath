@@ -3,7 +3,8 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:oxy="http://oxyplot.org/wpf"
+        xmlns:oxy="clr-namespace:OxyPlot.Wpf;assembly=OxyPlot.Wpf"
+        xmlns:oxyshared="clr-namespace:OxyPlot.Wpf;assembly=OxyPlot.Wpf"
         mc:Ignorable="d"
         Title="Sharp Smart Math" Height="480" Width="800" Icon="Icon.ico" WindowStartupLocation="CenterScreen" KeyDown="Window_KeyDown">
     <Grid Background="#FF303030">
@@ -69,7 +70,7 @@
             </avalonEdit:TextEditor.ContextMenu>
         </avalonEdit:TextEditor>
 
-        <GridSplitter Grid.Row="1" HorizontalAlignment="Stretch" Height="5" Margin="5,0,5,0" Background="#00000000"/>
+        <GridSplitter Grid.Row="1" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" Height="5" Margin="5,0,5,0" Background="#00000000"/>
 
         <avalonEdit:TextEditor
             x:Name="EditorResult"
@@ -97,7 +98,20 @@
                 </ContextMenu>
             </avalonEdit:TextEditor.ContextMenu>
         </avalonEdit:TextEditor>
-        <GridSplitter Grid.Column="1" Grid.Row="2" VerticalAlignment="Stretch" Width="5" Margin="0,5,0,5" Background="#00000000"/>
-        <oxy:PlotView x:Name="PlotViewer" Grid.Column="2" Grid.Row="2" Margin="0,0,5,5" BorderThickness="2" BorderBrush="#FFB4B4B4" Background="#FF404040" Foreground="White"/>
+        <GridSplitter Grid.Column="1" Grid.Row="2" VerticalAlignment="Stretch" Width="5" Margin="0,5,0,5" Background="#00000000" ResizeBehavior="PreviousAndNext"/>
+        <oxy:PlotView x:Name="PlotViewer" Grid.Column="2" Grid.Row="2" Margin="0,0,5,5" BorderThickness="2" BorderBrush="#FFB4B4B4" Background="#FF404040" Foreground="White">
+            <oxy:PlotView.DefaultTrackerTemplate>
+                <ControlTemplate>
+                    <oxyshared:TrackerControl Position="{Binding Position}" LineExtents="{Binding PlotModel.PlotArea}">
+                        <oxyshared:TrackerControl.Background>
+                            <SolidColorBrush Color="#FF646464"/>
+                        </oxyshared:TrackerControl.Background>
+                        <oxyshared:TrackerControl.Content>
+                            <TextBlock Text="{Binding}" Margin="7" />
+                        </oxyshared:TrackerControl.Content>
+                    </oxyshared:TrackerControl>
+                </ControlTemplate>
+            </oxy:PlotView.DefaultTrackerTemplate>
+        </oxy:PlotView>
     </Grid>
 </Window>
